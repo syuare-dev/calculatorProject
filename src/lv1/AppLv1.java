@@ -26,7 +26,7 @@ public class AppLv1 {
         System.out.println("==========계 산 결 과 ===========");
 
         // 계산 결과값 변수 선언
-        double result = 0;
+        double result;
 
         // 사칙연산 기호에 맞는 계산
         if (v1<0 || v2<0) {
