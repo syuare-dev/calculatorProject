@@ -20,13 +20,13 @@ public class AppLv1 {
         char operation;
 
         // 프로그램 설명
-        System.out.println("사칙연산이 가능한 계산기 입니다.");
+        System.out.println("사칙 연산이 가능한 계산기 입니다.");
         System.out.println("총 2개의 정수와 계산할 사칙연산 기호를 순서대로 입력해야 합니다.");
         System.out.println("(주의) 입력하실 정수는 0을 포함한 양의 정수일 경우에만 계산기가 동작합니다.");
 
         // 계산기 반복 > escape 값이 true 가 되면 계산기 종료
         do {
-            System.out.println("====== 계산 시작 ======");
+            System.out.println("==========계 산 시 작==========");
             //결과값 초기화
             result = 0;
 
@@ -36,7 +36,7 @@ public class AppLv1 {
                 if(scanner.hasNextInt()) {
                     v1 = scanner.nextInt();
                     scanner.nextLine(); // 내부 버퍼 초기화 (개행문자(\n) 제거)
-                    if (v1>=0) {
+                    if (v1>=0) { // 정수1(v1) 입력값이 음수인지 확인
                         break;
                     } else {
                         System.out.println("음수를 입력하셨습니다. 다시 입력해주세요.");
@@ -54,7 +54,7 @@ public class AppLv1 {
                 if(scanner.hasNextInt()) {
                     v2 = scanner.nextInt();
                     scanner.nextLine(); // 내부 버퍼 초기화 (개행문자(\n) 제거)
-                    if (v2>=0) {
+                    if (v2>=0) { // 정수2(v2) 입력값이 음수인지 확인
                         break;
                     } else {
                         System.out.println("음수를 입력하셨습니다. 다시 입력해주세요.");
@@ -117,7 +117,6 @@ public class AppLv1 {
             if(escapeKey.equals("exit")) {
                 escape = true;
             }
-
         } while(!escape);
 
         System.out.println("계산기 프로그램을 종료합니다.");
