@@ -11,23 +11,23 @@ public class Calculator {
 
     // 기능
     public int sum(int value1, int value2) {
-        int result = value1 + value2;
-        return result;
+        int result1 = value1 + value2;
+        return result1;
     }
 
     public int sub(int value1, int value2) {
-        int result = value1 - value2;
-        return result;
+        int result2 = value1 - value2;
+        return result2;
     }
 
     public int mul(int value1, int value2) {
-        int result = value1 * value2;
-        return result;
+        int result3 = value1 * value2;
+        return result3;
     }
 
     public double div(int value1, int value2) {
-        double result = (double)value1 / value2;
-        return result;
+        double result4 = (double)value1 / value2;
+        return result4;
     }
 
 
