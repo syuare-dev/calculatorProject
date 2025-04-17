@@ -36,7 +36,11 @@ public class AppLv1 {
                 if(scanner.hasNextInt()) {
                     v1 = scanner.nextInt();
                     scanner.nextLine(); // 내부 버퍼 초기화 (개행문자(\n) 제거)
-                    break;
+                    if (v1>=0) {
+                        break;
+                    } else {
+                        System.out.println("음수를 입력하셨습니다. 다시 입력해주세요.");
+                    }
                 }
                 else {
                     System.out.println("숫자만 입력할 수 있습니다. 다시 입력해주세요.");
@@ -50,7 +54,11 @@ public class AppLv1 {
                 if(scanner.hasNextInt()) {
                     v2 = scanner.nextInt();
                     scanner.nextLine(); // 내부 버퍼 초기화 (개행문자(\n) 제거)
-                    break;
+                    if (v2>=0) {
+                        break;
+                    } else {
+                        System.out.println("음수를 입력하셨습니다. 다시 입력해주세요.");
+                    }
                 } else {
                     System.out.println("숫자만 입력할 수 있습니다. 다시 입력해주세요.");
                     scanner.nextLine(); // 내부 버퍼 초기화
