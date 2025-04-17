@@ -42,7 +42,6 @@ public class AppLv1 {
             // 사칙연산 기호에 맞는 계산 진행
             if (v1<0 || v2<0) {
                 System.out.println("음수의 계산은 지원하지 않습니다.");
-                continue; // 결과 출력 및 종료 로직 건너뛰기
             } else {
                 switch (at){
                     case '+':
