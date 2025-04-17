@@ -3,14 +3,10 @@ package lv2;
 public class Calculator {
 
     // 속성
-    int v1;
-    int v2;
-    char operation;
+
 
 
     // 생성자
-
-
 
 
     // 기능
@@ -29,8 +25,8 @@ public class Calculator {
         return result;
     }
 
-    public int div(int value1, int value2) {
-        int result = value1 / value2;
+    public double div(int value1, int value2) {
+        double result = (double)value1 / value2;
         return result;
     }
 
