@@ -3,7 +3,7 @@ package lv2;
 public class Calculator {
 
     // 속성
-    private char operation;
+//    private char operation;
     private double result;
 
 
