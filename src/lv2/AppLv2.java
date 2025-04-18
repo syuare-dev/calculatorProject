@@ -1,19 +1,45 @@
 package lv2;
 
-// import java.util.Scanner;
+import java.util.Scanner;
 
 public class AppLv2 {
     public static void main(String[] args) {
-        System.out.println("클래스를 활용한 계산기를 만들어보자");
 
-//        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         Calculator calculator = new Calculator();
 
-        calculator.calculate(1,2,'+');
-        calculator.calculate(500,200,'-');
-        calculator.calculate(451,187,'*');
-        calculator.calculate(10,3,'/');
-        calculator.calculate(10,0,'/');
+        // 계산기 시작
+
+        System.out.print("숫자1을 입력해주세요: ");
+        calculator.setValue1(scanner.nextInt());
+        System.out.println("입력된 값: " + calculator.getValue1());
+
+        scanner.nextLine();
+
+        System.out.print("연산 기호를 입력해주세요: ");
+        calculator.setOperation(scanner.next());
+        System.out.println("입력된 값: " + calculator.getOperation());
+
+        scanner.nextLine();
+
+        System.out.print("숫자2를 입력해주세요: ");
+        calculator.setValue2(scanner.nextInt());
+        System.out.println("입력된 값: " + calculator.getValue2());
+
+        scanner.nextLine();
+
+        calculator.calculate();
+        calculator.outPutPrint();
+
+
+
+
+
+
+
+
+
+
 
 
 
