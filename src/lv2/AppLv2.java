@@ -1,19 +1,24 @@
 package lv2;
 
+// import java.util.Scanner;
+
 public class AppLv2 {
     public static void main(String[] args) {
         System.out.println("클래스를 활용한 계산기를 만들어보자");
 
+//        Scanner scanner = new Scanner(System.in);
         Calculator calculator = new Calculator();
 
-        int a = calculator.sum(2,3);
-        System.out.println("덧셈 = " + a);
-        int b = calculator.sub(10,3);
-        System.out.println("뺄셈 = " + b);
-        int c = calculator.mul(5,20);
-        System.out.println("곱셈 = " + c);
-        double d = calculator.div(100,5);
-        System.out.println("나눗셈 = " + d);
+        calculator.calculate(1,2,'+');
+        calculator.calculate(500,200,'-');
+        calculator.calculate(451,187,'*');
+        calculator.calculate(10,3,'/');
+        calculator.calculate(10,0,'/');
+
+
+
+
+
 
     }
 }
