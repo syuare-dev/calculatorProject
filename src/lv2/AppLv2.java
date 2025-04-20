@@ -31,6 +31,8 @@ public class AppLv2 {
             }
         }
 
+        System.out.println("입력된 값: " + calculator.getValue1());
+
 
         // if문으로 입력값 > 음수, 문자열 오류 처리
 //        while(true){
