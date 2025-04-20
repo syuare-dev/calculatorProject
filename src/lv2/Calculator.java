@@ -1,5 +1,8 @@
 package lv2;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Calculator {
 
     // 속성
@@ -14,7 +17,8 @@ public class Calculator {
 
     // 기능(메서드)
 
-    // 계산 기능
+
+    // 연산기호에 따른 계산 기능
     public void calculate() {
         switch (operation) {
             case "+":
@@ -40,11 +44,12 @@ public class Calculator {
 
     // 계산 결과 출력
     public void outPutPrint() {
-        System.out.println("value1: " + value1);
-        System.out.println("value2: " + value2);
-        System.out.println("operation: " + operation);
-        System.out.println("result: " + result);
-        System.out.println("-------------------------");
+        // 결과값 출력
+        // -> 소수점 내 불필요한 0 제거
+        // -> 소수점 15자리 지정 > 소수점 15자리 초과 시 비정상적인 값으로 출력
+        BigDecimal bdresult = new BigDecimal(result).setScale(15, RoundingMode.HALF_UP);
+        bdresult = bdresult.stripTrailingZeros();
+        System.out.println(value1 + " " + operation + " " + value2 + " = " + bdresult);
     }
 
 
@@ -63,7 +68,12 @@ public class Calculator {
     }
 
     public void setValue1(int value1) {
-        this.value1 = value1;
+        if(value1<0) { // 음수 값 검증 > 예외 처리
+            System.out.println("음수를 입력하셨습니다. 다시 입력해주세요.");
+            throw new IllegalArgumentException("음수 입력");
+        } else {
+            this.value1 = value1;
+        }
     }
 
     public void setValue2(int value2) {
