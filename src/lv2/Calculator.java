@@ -68,7 +68,7 @@ public class Calculator {
     }
 
     public void setValue1(int value1) {
-        if(value1<0) { // 음수 값 검증 > 예외 처리
+        if(value1<0) { // 숫자1 입력 시 음수 값 검증 > 예외 처리
             System.out.println("음수를 입력하셨습니다. 다시 입력해주세요.");
             throw new IllegalArgumentException("음수 입력");
         } else {
@@ -77,7 +77,12 @@ public class Calculator {
     }
 
     public void setValue2(int value2) {
-        this.value2 = value2;
+        if(value2<0){ // 숫자2 입력 시 음수 값 검증 > 예외 처리
+            System.out.println("음수를 입력하셨습니다. 다시 입력해주세요.");
+            throw new IllegalArgumentException("음수 입력");
+        } else {
+            this.value2 = value2;
+        }
     }
 
     public void setOperation(String operation) {
