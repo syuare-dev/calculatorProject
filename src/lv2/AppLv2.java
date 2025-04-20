@@ -45,20 +45,20 @@ public class AppLv2 {
 //            }
 //        }
 //
-//        System.out.print("연산 기호를 입력해주세요: ");
-//        calculator.setOperation(scanner.next());
-//        System.out.println("입력된 값: " + calculator.getOperation());
-//
-//        scanner.nextLine(); // 내부 버퍼 초기화
-//
-//        System.out.print("숫자2를 입력해주세요: ");
-//        calculator.setValue2(scanner.nextInt());
-//        System.out.println("입력된 값: " + calculator.getValue2());
-//
-//        scanner.nextLine(); // 내부 버퍼 초기화
+        System.out.print("연산 기호를 입력해주세요: ");
+        calculator.setOperation(scanner.next());
+        System.out.println("입력된 값: " + calculator.getOperation());
 
-//        calculator.calculate();
-//        calculator.outPutPrint();
+        scanner.nextLine(); // 내부 버퍼 초기화
+
+        System.out.print("숫자2를 입력해주세요: ");
+        calculator.setValue2(scanner.nextInt());
+        System.out.println("입력된 값: " + calculator.getValue2());
+
+        scanner.nextLine(); // 내부 버퍼 초기화
+
+        calculator.calculate();
+        calculator.outPutPrint();
 
 
 
