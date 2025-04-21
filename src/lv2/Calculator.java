@@ -16,8 +16,6 @@ public class Calculator {
 
 
     // 기능(메서드)
-
-
     // 연산기호에 따른 계산 기능
     public void calculate() {
         switch (operation) {
@@ -33,23 +31,25 @@ public class Calculator {
             case "/":
                 if (value2 == 0) { // 분모가 될 value2 일 때
                     System.out.println("나눗셈을 진행할 수 없습니다. - 분모가 0 입니다.");
-                    break;
                 } else {
                     result = (double) value1 / value2;
-                    break;
                 }
+                break;
 
         }
     }
 
     // 계산 결과 출력
-    public void outPutPrint() {
-        // 결과값 출력
-        // -> 소수점 내 불필요한 0 제거
-        // -> 소수점 15자리 지정 > 소수점 15자리 초과 시 비정상적인 값으로 출력
-        BigDecimal bdresult = new BigDecimal(result).setScale(15, RoundingMode.HALF_UP);
-        bdresult = bdresult.stripTrailingZeros();
-        System.out.println(value1 + " " + operation + " " + value2 + " = " + bdresult);
+    public void resultPrint() {
+//        // 결과값 출력
+//        // -> 소수점 내 불필요한 0 제거 && 소수점 15자리 지정
+//        // 소수점 15자리 초과 시 근사값으로 출력 > 안보이도록 수정
+        BigDecimal bigDecimalResult = new BigDecimal(result)
+                .setScale(15, RoundingMode.HALF_UP)
+                .stripTrailingZeros();
+        System.out.println(value1 + " " + operation + " " + value2 + " = " + bigDecimalResult.toPlainString());
+//        // bigDecimalResult 1의 자리 수가 0일 경우 E+5가 같이 출력되는 문제 발생 > 과학적 표기법
+//        // .toPlainString() 추가: 지수(E) 없는 값이 출력되도록 함
     }
 
 
@@ -86,12 +86,13 @@ public class Calculator {
     }
 
     public void setOperation(String operation) {
-        this.operation = operation;
+        char op = operation.charAt(0);
+        if (op != '+' && op != '-' && op != '*' && op != '/') { // 연산 기호 잘못 입력 시 예외 처리
+            System.out.println("잘못된 연산 기호를 입력하셨습니다. 다시 입력해주세요.");
+            throw new IllegalArgumentException("잘못된 기호 입력");
+        } else {
+            this.operation = operation;
+        }
     }
-
-
-
-
-
 }
 
