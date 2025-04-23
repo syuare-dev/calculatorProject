@@ -13,14 +13,14 @@ public class InputHandler <T extends Number> {
     // 기능(메서드)
     // 숫자 입력 기능
     public T inputValue() {
-        System.out.println("숫자를 입력해주세요: ");
+        System.out.print("숫자를 입력해주세요: ");
         while (true) {
             String inputStr = scanner.nextLine().trim();
             try {
                 T value = (T) Double.valueOf(inputStr);
                 return value ;
             } catch (NumberFormatException e) {
-                System.out.println("숫자를 입력해주세요.");
+                System.out.println("숫자를 입력해주세요. :" + inputStr);
             }
         }
     }
