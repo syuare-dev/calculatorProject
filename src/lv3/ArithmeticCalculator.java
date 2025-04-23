@@ -18,8 +18,8 @@ public class ArithmeticCalculator <T extends Number> {
 
     // 계산
     public double calculate() {
-        double val1 = value1.doubleValue();
-        double val2 = value2.doubleValue();
+        double val1 = value1.doubleValue(); // generic 으로 선언된 value1을 double형 변수 val1로 변환
+        double val2 = value2.doubleValue(); // generic 으로 선언된 value1을 double형 변수 val1로 변환
 
         switch (operator) {
             case PLUS:
@@ -42,11 +42,14 @@ public class ArithmeticCalculator <T extends Number> {
         }
         return result;
     }
+    // value1, value2, operation 의 Getter, Setter
 
+    // 어떤 타입의 자료형이 와도 값을 입력받을 수 있도록 generic 매개변수로 메서드 생성
     public void setValue1(T value1) {
         this.value1 = value1;
     }
 
+    // 어떤 타입의 자료형이 와도 값을 입력받을 수 있도록 generic 매개변수로 메서드 생성
     public void setValue2(T value2) {
         this.value2 = value2;
     }
@@ -55,6 +58,16 @@ public class ArithmeticCalculator <T extends Number> {
         this.operator = operator;
     }
 
+    public T getValue1() {
+        return this.value1;
+    }
 
+    public T getValue2() {
+        return this.value2;
+    }
+
+    public String getOperator() {
+        return this.operator.getOperator();
+    }
 }
 
