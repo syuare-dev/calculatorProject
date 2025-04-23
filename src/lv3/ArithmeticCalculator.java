@@ -1,7 +1,10 @@
 package lv3;
 
 // 계산 클래스
-//
+// Generic 선언 > 매개변서 타입을 선언할 때 보지 않는다
+// 단, 산술 연산자를 이용하기 위해 Number 상속을 받아 매개변수의 타입이 정해져 있지 않지만,
+//     Number 형이다 라는 것을 프로그램에 명시해주기 위하여 Number를 상속받게 설정 (<T extends Number>)
+// *Generic은 산술 연산자를 사용할 수 없다. (Generic은 원시 타입을 사용하지 못한다.)
 public class ArithmeticCalculator <T extends Number> {
 
     // 속성
