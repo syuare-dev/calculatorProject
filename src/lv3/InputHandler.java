@@ -6,17 +6,9 @@ import java.util.Scanner;
 public class InputHandler <T extends Number> {
 
     // 속성
-    private final Scanner scanner;
+    private final Scanner scanner = new Scanner(System.in);
 
     // 생성자
-    /**
-     *@param scanner 문자열 입력 Scanner(System.in)
-     *               main 메서드에서 입력한 Scanner 값을 매개 변수로 활용
-     */
-    public InputHandler (Scanner scanner) {
-        this.scanner = new Scanner(System.in);
-    }
-
 
     // 기능(메서드)
     // 숫자 입력 기능

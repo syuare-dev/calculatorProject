@@ -16,8 +16,8 @@ public class AppLv3 {
         ResultFormat resultFormat = new ResultFormat(); // 결과값 형식 변경
 
         // 입력 메서드 선언 > 숫자, 연산기호
-        InputHandler<Double> inputHandler = new InputHandler<>(scanner); // 숫자 입력
-        InputOperator inputOperator = new InputOperator(scanner); // 연산기호 입력
+        InputHandler<Double> inputHandler = new InputHandler<>(); // 숫자 입력
+        InputOperator inputOperator = new InputOperator(); // 연산기호 입력
 
 
         do {
