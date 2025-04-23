@@ -35,7 +35,7 @@ public class ArithmeticCalculator <T extends Number> {
                 if (val2 == 0) { // 분모가 될 value2=0 일 때
                     throw new ArithmeticException("나눗셈을 진행할 수 없습니다. - 분모가 0 입니다.");
                 } else {
-                    result = (double) val1 / val2;
+                    result = val1 / val2;
                 }
                 break;
 
