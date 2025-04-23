@@ -29,5 +29,10 @@ public enum Operator {
         throw new IllegalArgumentException("잘못된 연산 기호입니다.: " + str);
     }
 
+    // enum 값 getter
+    public String getOperator() {
+        return operator;
+    }
+
 
 }
